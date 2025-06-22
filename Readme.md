@@ -6,4 +6,4 @@
 
 Docker container 
 - Since we have dockerised the project all you have run is `docker build -t productivity-tracker .`
-- ` docker run -d  productivity-tracker`
+- `docker run -p 4000:4000 productivity-tracker`
