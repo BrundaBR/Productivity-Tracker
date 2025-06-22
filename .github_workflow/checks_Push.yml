@@ -1,0 +1,22 @@
+on:
+  push:
+    branch:
+      - main
+      
+jobs:
+  docker_syntax_check:
+    runs-on: ubuntu-latest
+    steps:
+      - name : Build Docker Image
+        run: 
+          docker build -t productivity-tracker .
+          echo "✅ Docker Image Build Successfully"
+      - name: RUn container
+          run:
+            docker run -d productivity-tracker
+            echo "✅ Container Run Successfully"
+
+
+          
+
+        
